@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: rgb(46, 46, 46);
+  background-color: #e0e0e0;
+  font-weight: 100;
+  font-size: 14px;
+}
+/* LOGGED IN MAIN */
+.logo {
+  position: absolute;
+  left: 25px;
+  height: 40px;
+}
+
+.mainBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.nav {
+  background-color: rgb(51, 51, 51);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  z-index: 100;
+}
+
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(51, 51, 51, 0.55);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 0px;
+}
+
+.nav__item:hover {
+  background-color: rgb(177, 177, 177);
+}
+
+.nav__item a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+}
+
+.postBoxWindow {
+  padding: 25px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 950px;
+  background-color: rgb(51, 51, 51);
+  border-radius: 20px;
+}
+
+/* font-family: "Poppins", sans-serif; */
+.footer {
+  font-family: "Cinzel", "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  font-weight: 100;
+  margin-top: auto;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 0;
+  z-index: 100;
+}
+
+.homeWindow {
+  display: flex;
+}
+
+.homeLogo {
+  height: 10vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+
+.homeLogoTriggered {
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  transition: all 2s;
+}
+
+.timerBody {
+  position: absolute;
+  margin-top: -120px;
+  right: 0px;
+  height: 25px;
+  font-size: 13px;
+  z-index: 100;
+}
+
+.timerText {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+  margin-right: 15px;
+}
+
+.lastDate {
+  font-size: 10px;
+}
+
+.acc_settings_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 25px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  width: 950px;
+  height: 400px;
+  background-color: rgb(51, 51, 51);
+  border-radius: 20px;
+}
+
+.innerOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* FIRST PAGE */
+.first_page_options {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 50vh;
+  margin-top: -115px;
+  width: 360px;
+  height: 40px;
+}
+
+.loginBox {
+  display: flex;
+  color: cornsilk;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 50vh;
+  margin-top: -75px;
+  width: 400px;
+  height: 150px;
+  background-color: rgb(51, 51, 51);
+  border-radius: 20px;
+}
+
+.createAccountBox {
+  display: flex;
+  color: cornsilk;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 50vh;
+  margin-top: -75px;
+  width: 400px;
+  height: 150px;
+  background-color: rgb(51, 51, 51);
+  border-radius: 20px;
+}
+/* FIRST PAGE INPUTS */
+.inputs {
+  width: 175px;
+  margin: auto;
+  padding: 0;
+  border: none;
+}
+
+.inputs input {
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: none;
+  width: 175px;
+  height: 20px;
+  margin-bottom: 4px;
+  text-align: center;
+  color: rgb(44, 44, 44);
+  outline: none;
+}
+/* BUTTONS */
+
+.btn {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  width: 175px;
+  height: 24px;
+  border-radius: 15px;
+  background-color: rgb(177, 177, 177);
+  border: none;
+  margin: auto;
+  margin-top: 5px;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: rgb(90, 90, 90);
+  color: white;
+  transition: all 0.5s;
+}
+
+.btnactive {
+  background-color: rgb(90, 90, 90);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+/* MODAL */
+.modal {
+  position: absolute;
+  top: 50vh;
+  margin-top: -60px;
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  border: none;
+  z-index: 10;
+  text-align: center;
+}
+
+.popupMsg {
+  font-size: 16px;
+}
+
+.btn_close-modal {
+  position: absolute;
+  top: 65px;
+  transform: translate(-50%);
+  width: 50px;
+  height: 20px;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 0px;
+  vertical-align: middle;
+}
+
+.btn_close-modal2 {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 50px;
+  height: 20px;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 0px;
+  vertical-align: middle;
+  margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+/* NO SELECT FOR TEXT */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+}
+
+/* POST BOX */
+.postBox {
+  position: relative;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 25px;
+  width: 800px;
+  height: 370px;
+  color: rgb(90, 90, 90);
+  background-color: white;
+}
+
+.postBoxForm input {
+  width: 800px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.postBoxForm textarea {
+  width: 800px;
+  max-width: 800px;
+  height: 150px;
+  max-height: 150px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+}
+
+.postBox button {
+  position: absolute;
+  right: 20px;
+}
+
+.postBoxComments {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  margin-top: 25px;
+  padding: 20px 20px 10px 20px;
+  border-radius: 25px;
+  width: 800px;
+  color: rgb(90, 90, 90);
+  background-color: white;
+}
+
+.flexBox {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 780px;
+  border-radius: 10px;
+  background-color: rgb(209, 209, 209);
+  word-wrap: break-word;
+}
+
+.publishDate {
+  position: relative;
+}
+
+.underline {
+  text-decoration: underline;
+}
+/* UPDATE ACCOUNT */
+.updateWindowForm {
+  margin: auto;
+}
+
+.updateWindowForm input {
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  width: 170px;
+  height: 20px;
+  margin-bottom: 4px;
+  text-align: center;
+  color: rgb(44, 44, 44);
+  outline: none;
+}
+
+.updateWindowForm p {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.updateWindow {
+  position: absolute;
+  height: 240px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 10;
+}

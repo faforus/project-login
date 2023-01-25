@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Illuminati</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="mainBody hidden">
+      <nav class="nav">
+        <img class="logo" src="logo.png" />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link linkHome" href="#section--1">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link linkPostBox" href="#section--2">Post Box</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link btn_acc_settings" href="#section--3"
+              >Account Settings</a
+            >
+          </li>
+          <li class="nav__item">
+            <a class="nav__link btn_log_out" href="#section--4">Log Out</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="homeWindow">
+        <img class="homeLogo" src="logo.png" />
+      </div>
+      <div class="postBoxWindow hidden">
+        <h1 class="welcome">Welcome X</h1>
+        <p class="date">current date</p>
+        <p class="lastDate">last login</p>
+        <div class="postBox">
+          <h1>postbox</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis
+            pellentesque nisl. Cras gravida mattis ante eu lacinia. Nam quis est
+            eget quam placerat gravida sed elementum dui. Nulla ut nisi maximus
+            libero bibendum hendrerit. In sed velit imperdiet, porta neque eget,
+            laoreet neque. Suspendisse vitae egestas enim. Maecenas sit.
+          </p>
+          <form class="postBoxForm">
+            <p>Title</p>
+            <div><input class="postBoxTitle" type="text" /></div>
+            <p>Comment</p>
+            <div><textarea class="postBoxText"></textarea></div>
+            <div><button class="btn btnPostBox">Submit</button></div>
+          </form>
+        </div>
+        <div class="postBoxComments">
+          <div class="flexBox">
+            <h2>Michał Parasiński</h2>
+            <p class="publishDate"></p>
+            <h3 class="underline">Temat</h3>
+            <p>Lubię małych chłopców</p>
+          </div>
+        </div>
+      </div>
+      <div class="acc_settings_div hidden">
+        <div class="innerOptions">
+          <h1>Account Settings</h1>
+          <p class="acc_name">Username:</p>
+          <p class="acc_pwd">Account password:</p>
+          <p class="acc_own_name">Owner name:</p>
+          <p class="acc_own_sur">Owner surname:</p>
+          <button class="btn btnUpdateFirst">Update</button>
+        </div>
+      </div>
+      <div class="footer">
+        <h1>annuit cœptis</h1>
+        <div class="timerBody">
+          <p class="timerText">Time to log out: <span class="timer"></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="first_page_options">
+      <div>
+        <button class="btn btn_select_p1 btnactive" data-tab="1">Log In</button>
+      </div>
+      <div>
+        <button class="btn btn_select_p1" data-tab="2">Create Account</button>
+      </div>
+    </div>
+
+    <div class="createAccountBox box-2 hidden">
+      <form class="inputs">
+        <div>
+          <input type="text" placeholder="username" class="create_input_user" />
+        </div>
+        <div>
+          <input
+            type="password"
+            placeholder="password"
+            class="create_input_pwd"
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            placeholder="confirm password"
+            class="create_input_pwdc"
+          />
+        </div>
+        <div><button class="btn btn_create">Create Account</button></div>
+      </form>
+    </div>
+
+    <div class="loginBox box-1">
+      <form class="inputs">
+        <div>
+          <input type="text" placeholder="username" class="login_input_user" />
+        </div>
+        <div>
+          <input
+            type="password"
+            placeholder="password"
+            class="login_input_pwd"
+          />
+        </div>
+        <div><button class="btn btn_login">Log In</button></div>
+      </form>
+    </div>
+
+    <div class="updateWindow hidden">
+      <form class="updateWindowForm">
+        <p class="noselect">Name:</p>
+        <div><input type="text" class="updateName" /></div>
+        <p class="noselect">Surname:</p>
+        <div><input type="text" class="updateSurname" /></div>
+        <div><button class="btn btnUpdate">Update</button></div>
+        <div><button class="btn btnCancelUpdate">Cancel</button></div>
+      </form>
+    </div>
+
+    <div class="modal hidden">
+      <p class="popupMsg noselect">This account does not exist.</p>
+      <button class="btn btn_close-modal">&times;</button>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
